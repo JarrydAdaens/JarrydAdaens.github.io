@@ -6,10 +6,12 @@
     if (nav) {
       let section = null;
 
-      if (path.startsWith("/apps/")) {
+      if (path === "/apps/kung-fu.html") {
+        section = "ai-engineering";
+      } else if (path.startsWith("/apps/")) {
         section = "apps";
       } else if (path === "/open-source/agentic-rails.html") {
-        section = "agentic-rails";
+        section = "ai-engineering";
       } else if (path.startsWith("/games/")) {
         section = "games";
       }

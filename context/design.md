@@ -73,14 +73,15 @@ The current site is organised as a small collection of standalone pages:
 
 - **Home (`index.html`):** Introduces Jarryd's software and points visitors to
   the main sections.
-- **Apps:** The navigation links directly to the Kung Fu and ROG Ally Battery
-  Indicator product pages. There is no intermediate Apps overview.
-- **Agentic Rails:** `open-source/agentic-rails.html` is the system overview.
-  Its navigation dropdown will also link directly to the four constituent Git
-  repositories once their names and URLs are supplied.
-- **Games:** The navigation links directly to Soup Tycoon and the compact Indie
-  page for earlier game-development work. There is no intermediate Games
-  overview.
+- **Apps:** The navigation links directly to the ROG Ally Battery Indicator
+  product page. There is no intermediate Apps overview.
+- **AI Engineering:** The navigation links directly to Kung Fu and the Agentic
+  Rails overview at `open-source/agentic-rails.html`. It will also link directly
+  to the four Agentic Rails Git repositories once their names and URLs are
+  supplied.
+- **Games:** The navigation links directly to Soup Tycoon, block-game-2, and the
+  compact Indie page for earlier game-development work. There is no intermediate
+  Games overview.
 - **Blog:** Links visitors to Jarryd's writing on Medium at
   `https://medium.com/@jarryd.adaens`; blog posts are not hosted in this
   repository.
@@ -89,11 +90,10 @@ The current site is organised as a small collection of standalone pages:
 - **Support (`support.html`):** Public support guidance and contact routes for
   users, privacy enquiries, and store review requirements.
 
-The same header markup is used on every content page. Apps and Games are direct
-dropdown menus, while Agentic Rails keeps an overview plus direct repository
-links. The shared footer keeps privacy, support, Kung Fu, and blog links
-available throughout the site. At present, this shared structure is repeated
-in each HTML file rather than generated from templates.
+The same header markup is used on every content page. Apps, AI Engineering, and
+Games are direct dropdown menus. The shared footer keeps privacy, support, Kung
+Fu, and blog links available throughout the site. At present, this shared
+structure is repeated in each HTML file rather than generated from templates.
 
 ## Content Principles
 

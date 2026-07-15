@@ -11,6 +11,7 @@ Primary sections:
 - `apps/rog-ally-battery-indicator.html` - ROG Ally Battery Indicator product and support information
 - `open-source/agentic-rails.html` - Agentic Rails system overview
 - `games/soup-tycoon.html` - Soup Tycoon project page
+- `games/block-game-2.html` - agentic revival of the legacy BlockWorld game
 - Blog links point to [Jarryd's Medium profile](https://medium.com/@jarryd.adaens)
 - `games/indie.html` - brief archive of earlier game-development work
 - `privacy.html` - public privacy policy
