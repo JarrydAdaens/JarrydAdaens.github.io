@@ -125,7 +125,8 @@ a:hover {
 .nav-link:hover,
 .dropdown summary:hover,
 .theme-toggle:hover,
-.nav-link[aria-current="page"] {
+.nav-link[aria-current="page"],
+.dropdown.current summary {
   background: var(--surface-alt);
   color: var(--text);
 }
@@ -175,6 +176,11 @@ a:hover {
 .dropdown-menu a:hover {
   background: var(--surface-alt);
   color: var(--text);
+}
+
+.dropdown-menu a[aria-current="page"] {
+  color: var(--text);
+  font-weight: 700;
 }
 
 .theme-toggle {

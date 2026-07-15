@@ -2,15 +2,16 @@
 
 Static GitHub Pages site for Jarryd Adaens.
 
-The site collects personal apps, open-source projects, games and learning projects, blog placeholders, privacy information, support details, and legacy indie links.
+The site collects personal apps, open-source projects, games and learning projects, privacy information, support details, earlier game-development work, and a link to Jarryd's writing on Medium.
 
 Primary sections:
 
 - `index.html` - home page
-- `apps/` - app summaries and app detail pages
-- `open-source/` - open-source project summaries
-- `games/` - small games and learning projects
-- `blog/` - static blog index and placeholder posts
-- `indie/` - legacy indie game development summary
+- `apps/kung-fu.html` - Kung Fu product and support information
+- `apps/rog-ally-battery-indicator.html` - ROG Ally Battery Indicator product and support information
+- `open-source/agentic-rails.html` - Agentic Rails system overview
+- `games/soup-tycoon.html` - Soup Tycoon project page
+- Blog links point to [Jarryd's Medium profile](https://medium.com/@jarryd.adaens)
+- `games/indie.html` - brief archive of earlier game-development work
 - `privacy.html` - public privacy policy
 - `support.html` - support/contact page

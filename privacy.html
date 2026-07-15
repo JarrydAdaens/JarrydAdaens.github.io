@@ -13,19 +13,35 @@
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="/">Jarryd Adaens</a>
         <div class="nav-links">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/apps/">Apps</a>
-          <a class="nav-link" href="/open-source/">Open Source</a>
-          <a class="nav-link" href="/games/">Games</a>
-          <a class="nav-link" href="/blog/">Blog</a>
-          <a class="nav-link" href="/privacy.html" aria-current="page">Privacy</a>
+          <a class="nav-link" href="/" data-nav-home>Home</a>
+          <details class="dropdown" data-nav-section="apps">
+            <summary>Apps</summary>
+            <div class="dropdown-menu">
+              <a href="/apps/kung-fu.html">Kung Fu</a>
+              <a href="/apps/rog-ally-battery-indicator.html">ROG Ally Battery Indicator</a>
+            </div>
+          </details>
+          <details class="dropdown" data-nav-section="agentic-rails">
+            <summary>Agentic Rails</summary>
+            <div class="dropdown-menu">
+              <a href="/open-source/agentic-rails.html">Overview</a>
+              <!-- Add four direct repository links here when their names and URLs are supplied. -->
+            </div>
+          </details>
+          <details class="dropdown" data-nav-section="games">
+            <summary>Games</summary>
+            <div class="dropdown-menu">
+              <a href="/games/soup-tycoon.html">Soup Tycoon</a>
+              <a href="/games/indie.html">Indie</a>
+            </div>
+          </details>
+          <a class="nav-link" href="https://medium.com/@jarryd.adaens">Blog</a>
+          <a class="nav-link" href="/privacy.html">Privacy</a>
           <a class="nav-link" href="/support.html">Support</a>
-          <a class="nav-link" href="/indie/">Indie</a>
           <button class="theme-toggle" type="button" data-theme-toggle>Theme: Auto</button>
         </div>
       </nav>
     </header>
-
     <main class="main">
       <section class="hero">
         <p class="eyebrow">Privacy policy</p>
@@ -79,16 +95,16 @@
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <span>&copy; 2026 Jarryd Adaens</span>
+        <span>&copy; 2026 Jarryd Adaens &middot; v1.1</span>
         <div class="footer-links">
           <a href="/privacy.html">Privacy</a>
           <a href="/support.html">Support</a>
-          <a href="/apps/">Apps</a>
-          <a href="/blog/">Blog</a>
+          <a href="/apps/kung-fu.html">Kung Fu</a>
+          <a href="https://medium.com/@jarryd.adaens">Blog</a>
         </div>
       </div>
     </footer>
     <script src="/assets/js/theme-toggle.js"></script>
-    <script src="/assets/js/nav.js"></script>
+    <script src="/assets/js/nav.js?v=20260715"></script>
   </body>
 </html>
