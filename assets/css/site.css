@@ -372,6 +372,139 @@ th {
   background: var(--surface-alt);
 }
 
+.rails-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 64px);
+  padding: 32px 0 64px;
+}
+
+.rails-hero-copy {
+  display: grid;
+  gap: 20px;
+}
+
+.rails-manifesto {
+  max-width: 600px;
+  color: var(--text);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.rails-art {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) * 1.5);
+  background: #eee8db;
+  box-shadow: var(--shadow);
+  transform: rotate(0.35deg);
+}
+
+.rails-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.rails-art figcaption {
+  padding: 12px 16px;
+  border-top: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.rails-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.rail-card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-height: 290px;
+  padding: 26px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, var(--surface), var(--surface-alt));
+}
+
+.rail-card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent), var(--warning));
+  content: "";
+}
+
+.rail-card p:not(.rail-number) {
+  color: var(--muted);
+}
+
+.rail-card .actions {
+  align-self: end;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.rail-number {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.rails-loop-section {
+  display: grid;
+  gap: 12px;
+}
+
+.rails-flow {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  margin: 4px 0 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  list-style: none;
+  counter-reset: rails-step;
+}
+
+.rails-flow li {
+  position: relative;
+  padding: 18px 13px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 750;
+  text-align: center;
+  counter-increment: rails-step;
+}
+
+.rails-flow li + li {
+  border-left: 1px solid var(--border);
+}
+
+.rails-flow li::before {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  content: "0" counter(rails-step);
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   background: var(--surface);
@@ -410,8 +543,30 @@ th {
   }
 
   .grid,
-  .grid.two {
+  .grid.two,
+  .rails-grid {
     grid-template-columns: 1fr;
+  }
+
+  .rails-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .rails-hero-copy {
+    max-width: 760px;
+  }
+
+  .rails-flow {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .rails-flow li + li {
+    border-left: 0;
+  }
+
+  .rails-flow li {
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
 }
 
@@ -443,6 +598,19 @@ th {
 
   .lead {
     font-size: 18px;
+  }
+
+  .rails-hero {
+    padding-top: 16px;
+  }
+
+  .rails-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .rail-card {
+    min-height: 0;
+    padding: 22px;
   }
 
   .footer-inner {

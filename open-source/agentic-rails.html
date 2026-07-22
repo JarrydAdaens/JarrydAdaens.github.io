@@ -1,7 +1,18 @@
 <!doctype html>
 <html lang="en">
-  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Agentic Rails - Jarryd Adaens</title><script src="/assets/js/theme-boot.js"></script><link rel="stylesheet" href="/assets/css/site.css"></head>
-  <body><header class="site-header">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agentic Rails - Jarryd Adaens</title>
+    <meta name="description" content="Agentic Rails is an IDE-agnostic framework for legible, repeatable and accountable AI-assisted software development.">
+    <meta property="og:title" content="Agentic Rails">
+    <meta property="og:description" content="Agents can move fast, but they need rails.">
+    <meta property="og:image" content="/assets/images/agentic-rails-journey.jpg">
+    <script src="/assets/js/theme-boot.js"></script>
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="/">Jarryd Adaens</a>
         <div class="nav-links">
@@ -11,7 +22,6 @@
             <div class="dropdown-menu">
               <a href="/apps/kung-fu.html">Kung Fu</a>
               <a href="/open-source/agentic-rails.html">Agentic Rails</a>
-              <!-- Add four direct repository links here when their names and URLs are supplied. -->
             </div>
           </details>
           <details class="dropdown" data-nav-section="apps">
@@ -35,7 +45,92 @@
         </div>
       </nav>
     </header>
-    <main class="main"><section class="hero"><p class="eyebrow">Open source project</p><h1>Agentic Rails</h1><p class="lead">An opinionated system for AI-assisted software development using structured context and tooling.</p></section><section class="section content"><div><h2>Summary</h2><p>Agentic Rails is a workflow and context system for AI-assisted development.</p></div><div><h2>What It Is For</h2><p>It helps structure plans, evidence, handovers, implementation notes, and project context for agentic work.</p></div><div><h2>Repository Links</h2><p>Agentic Rails is made up of four GitHub repositories. Direct links will be added to the navigation once their names and URLs are confirmed.</p></div><div><h2>Status</h2><p>In progress.</p></div><div><h2>Technology</h2><p>Documentation, tooling conventions, and AI-assisted development workflows.</p></div><div><h2>Notes</h2><p>More context will be added once public repository links are available.</p></div></section></main>
+
+    <main class="main">
+      <section class="rails-hero">
+        <div class="rails-hero-copy">
+          <p class="eyebrow">Open source &middot; 2 of 4 repositories ready</p>
+          <h1>Agentic Rails</h1>
+          <p class="rails-manifesto">Agents can move fast, but they need rails.</p>
+          <p class="lead">An opinionated, IDE-agnostic system for AI-assisted software development: durable project context on the left, reusable agent behaviour on the right, and a human driving the work.</p>
+          <div class="actions">
+            <a class="button" href="https://github.com/JarrydSemmens/agentic_rails_context_starter">Explore the left rail</a>
+            <a class="button secondary" href="https://github.com/JarrydSemmens/agentic_rails_tooling">Explore the right rail</a>
+          </div>
+        </div>
+
+        <figure class="rails-art">
+          <img src="/assets/images/agentic-rails-journey.jpg" alt="A hand-drawn train carrying a working crew along two rails through an Australian landscape, with a records office and workshop beside the line." width="1693" height="929">
+          <figcaption>The framework is the track. Your IDE is the train, your project is the carriage, and you are the driver.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">The core system</p>
+          <h2>Two rails. One project.</h2>
+          <p class="muted">The rails make agentic work legible, inspectable and repeatable without pretending the agent owns the journey.</p>
+        </div>
+
+        <div class="rails-grid">
+          <article class="rail-card">
+            <p class="rail-number">01 &middot; Left rail</p>
+            <h3>Context and provenance</h3>
+            <p>Project-local structure for design, milestones, stories, implementation plans, evidence, reviews and handover. It keeps intent beside execution.</p>
+            <div class="actions">
+              <a class="button secondary" href="https://github.com/JarrydSemmens/agentic_rails_context_starter">agentic_rails_context_starter</a>
+            </div>
+          </article>
+
+          <article class="rail-card">
+            <p class="rail-number">02 &middot; Right rail</p>
+            <h3>Tools and behaviour</h3>
+            <p>Reusable skills, rules, workflows and agent personas that shape how agents plan, execute, validate and hand ownership back to the human.</p>
+            <div class="actions">
+              <a class="button secondary" href="https://github.com/JarrydSemmens/agentic_rails_tooling">agentic_rails_tooling</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section rails-loop-section">
+        <div class="section-head">
+          <p class="eyebrow">The journey</p>
+          <h2>From prompt-and-hope to accountable work.</h2>
+          <p class="muted">The ticket costs some cognitive load. In return, the route is visible and recovery is possible when the journey goes sideways.</p>
+        </div>
+        <ol class="rails-flow" aria-label="Agentic Rails development loop">
+          <li>Context</li>
+          <li>Plan</li>
+          <li>Execute</li>
+          <li>Log</li>
+          <li>Review</li>
+          <li>Handover</li>
+          <li>Ownership</li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">Beside the line</p>
+          <h2>Two more repositories are coming.</h2>
+          <p class="muted">They service the railway without becoming extra rails. The core system still runs without them.</p>
+        </div>
+        <div class="grid two">
+          <article class="card">
+            <p class="meta">Coming soon &middot; Records office</p>
+            <h3>Agentic Rails Memory</h3>
+            <p>Durable cross-project learnings and empirical resumes for models and agent personas.</p>
+          </article>
+          <article class="card">
+            <p class="meta">Coming soon &middot; Trolley shop</p>
+            <h3>Agentic Rails Marketplace</h3>
+            <p>A place to distribute and install the reusable plugins that travel alongside the system.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
     <footer class="site-footer">
       <div class="footer-inner">
         <span>&copy; 2026 Jarryd Adaens &middot; v1.1</span>
