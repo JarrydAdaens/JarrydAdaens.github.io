@@ -284,6 +284,10 @@ p {
   text-transform: uppercase;
 }
 
+.meta.available {
+  color: var(--accent);
+}
+
 .actions {
   display: flex;
   gap: 12px;
