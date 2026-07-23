@@ -483,7 +483,6 @@ th {
   border-radius: var(--radius);
   background: var(--surface);
   list-style: none;
-  counter-reset: rails-step;
 }
 
 .rails-flow li {
@@ -493,20 +492,18 @@ th {
   font-size: 14px;
   font-weight: 750;
   text-align: center;
-  counter-increment: rails-step;
 }
 
 .rails-flow li + li {
   border-left: 1px solid var(--border);
 }
 
-.rails-flow li::before {
+.rails-step {
   display: block;
   margin-bottom: 4px;
   color: var(--accent);
   font-size: 11px;
   letter-spacing: 0.08em;
-  content: "0" counter(rails-step);
 }
 
 .site-footer {

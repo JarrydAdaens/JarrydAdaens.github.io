@@ -9,7 +9,7 @@
     <meta property="og:description" content="Agents can move fast, but they need rails.">
     <meta property="og:image" content="/assets/images/agentic-rails-journey.jpg">
     <script src="/assets/js/theme-boot.js"></script>
-    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/site.css?v=20260723a">
   </head>
   <body>
     <header class="site-header">
@@ -49,13 +49,14 @@
     <main class="main">
       <section class="rails-hero">
         <div class="rails-hero-copy">
-          <p class="eyebrow">Open source &middot; 3 of 4 repositories available</p>
+          <p class="eyebrow">AI Engineering Framework</p>
           <h1>Agentic Rails</h1>
           <p class="rails-manifesto">Agents can move fast, but they need rails.</p>
-          <p class="lead">An opinionated, IDE-agnostic system for AI-assisted software development: durable project context on the left, reusable agent behaviour on the right, and a human driving the work.</p>
+          <p class="lead">This does two things: organize your context, then give your agents skills and rules for working with that structured context.</p>
           <div class="actions">
-            <a class="button" href="https://github.com/JarrydSemmens/agentic_rails_context_starter">Explore the left rail</a>
-            <a class="button secondary" href="https://github.com/JarrydSemmens/agentic_rails_tooling">Explore the right rail</a>
+            <a class="button" href="https://github.com/JarrydSemmens/agentic_rails_context_starter">Context Starter</a>
+            <a class="button secondary" href="https://github.com/JarrydSemmens/agentic_rails_tooling">Skills + Rules + Persona</a>
+            <a class="button secondary" href="https://github.com/JarrydAdaens/agentic_rails_marketplace">Hooks + Guardrails</a>
           </div>
         </div>
 
@@ -67,15 +68,65 @@
 
       <section class="section">
         <div class="section-head">
-          <p class="eyebrow">The core system</p>
-          <h2>Two rails. One project.</h2>
-          <p class="muted">The rails make agentic work legible, inspectable and repeatable without pretending the agent owns the journey.</p>
+          <p class="eyebrow">The Problem</p>
+          <h2>Agents feel messy</h2>
+          <p>Claude, Codex, Cursor and all the others will smash out a bunch of work after a prompt. We want them doing planning, avoiding tech debt and running for hours without bothering us humans with tedious questions.</p>
+          <p>They need some sort of Jira board for tasks to do, and evidence they did it. These should simple, and committed along with the code so that we don't depend on chant histories on one computer.</p>
+          <p>And coding agents need hard limits that will block them doing the wrong thing, since just asking in a prompt is a request.</p>
+          <p>Agents don't remember anything, so constantly telling them how to work is tedious. And the .claude\.agents files get full up fast, flooding the context window so they get dumb. Especially on big projects.</p>
+          <p>All this is multiplied by the many agentic IDE that are available. Being tethered to one solution becomes a problem if your environment must change.</p>
+        </div>
+      </section>
+
+      <section class="section rails-loop-section">
+        <div class="section-head">
+          <p class="eyebrow">A Context Solution</p>
+          <h2>6 Tiers of Context</h2>
+          <p>Agentic Rails helps get the design of your project out into lots of markdown files, arranged in a hierarchy. It uses different tiers of context files to zoom into what you need done, so the agent and the human both can understand the full picture when doing some work.</p>
+          <p>This borrows from Agile to take the overall design document of the project, and break it into milestones. Using this context structure, you break those into stories and write one or more plans to get a story done.</p>
+          <p>This forms your context using Progressive Disclosure. This focuses you and the agent in on the task without flooding the context window.</p>          
         </div>
 
+        <ol class="rails-flow" start="0" aria-label="Agentic Rails development loop">
+          <li><span class="rails-step">0</span>Dictation</li>
+          <li><span class="rails-step">1</span>Design</li>
+          <li><span class="rails-step">2</span>Milestone</li>
+          <li><span class="rails-step">3</span>Story</li>
+          <li><span class="rails-step">4</span>Plan</li>
+          <li><span class="rails-step">5</span>Phase</li>          
+        </ol>
+        <p class="muted">Breaking this work down, provides clear instruction as well as history right there in the repo in plain text where everyone can use it.</p>
+      </section>
+
+      <section class="section rails-loop-section">
+        <div class="section-head">
+          <p class="eyebrow">A Behavior Solution</p>
+          <h2>Skills, Rules and Persona</h2>
+          <p>Agentic rails has skills that compliment, and assume this context system. Such as rails-planning that drops a plan off in the context/implementation-plans/milestone directory. This keeps your project tidy with less effort from you. </p>
+          <p>The intention is that you fork the tooling repo, and use it for your source of truth to version control system wide agent persona, rules and skills.</p>          
+        </div>
+        <p class="muted">These can be copied into the local settings for most IDE's to activate them.</p>
+      </section>
+
+
+      <section class="section">
+        
+        <div class="section-head">
+          <p class="eyebrow">An Enforcement Solution</p>
+          <h2>Guard rails, validators and hooks.</h2>          
+          <p>Lastly, taking advantage of hooks in your Agentic IDE allows for validation and guard rails. That's where you can install the Agent Rails Marketplace to get plugins into your projects or whole system.</p>
+          <p>Gates block progress until pre-requisites are completed, like unit tests must pass. Guardrails kick in when an agent does something wrong, like reject a python tool call if the agent fails to use UV.</p>
+          <p>Hooks also allow you to spin up specific sub agents, such as a Critic or an Advisor guardrail to provide feedback to your agent while it works. This automates pointing out problems in planning or implementation.</p>          
+          <p class="muted">Don't tell an agent what to do in a prompt, enforce it with a script that instead!</p>
+        </div>
+
+        
+      <section class="section">
         <div class="rails-grid">
+
           <article class="rail-card">
             <p class="rail-number">01 &middot; Left rail</p>
-            <h3>Context and provenance</h3>
+            <h3>Context Starter Template</h3>
             <p>Project-local structure for design, milestones, stories, implementation plans, evidence, reviews and handover. It keeps intent beside execution.</p>
             <div class="actions">
               <a class="button secondary" href="https://github.com/JarrydSemmens/agentic_rails_context_starter">agentic_rails_context_starter</a>
@@ -84,53 +135,40 @@
 
           <article class="rail-card">
             <p class="rail-number">02 &middot; Right rail</p>
-            <h3>Tools and behaviour</h3>
-            <p>Reusable skills, rules, workflows and agent personas that shape how agents plan, execute, validate and hand ownership back to the human.</p>
+            <h3>Tooling</h3>
+            <p>Reusable skills, rules, and agent personas that you can quickly copy to where they are needed. These shape how agents plan, execute, validate.</p>
             <div class="actions">
               <a class="button secondary" href="https://github.com/JarrydSemmens/agentic_rails_tooling">agentic_rails_tooling</a>
             </div>
-          </article>
+          </article>          
+
         </div>
+        
       </section>
 
-      <section class="section rails-loop-section">
-        <div class="section-head">
-          <p class="eyebrow">The journey</p>
-          <h2>From prompt-and-hope to accountable work.</h2>
-          <p class="muted">The ticket costs some cognitive load. In return, the route is visible and recovery is possible when the journey goes sideways.</p>
-        </div>
-        <ol class="rails-flow" aria-label="Agentic Rails development loop">
-          <li>Context</li>
-          <li>Plan</li>
-          <li>Execute</li>
-          <li>Log</li>
-          <li>Review</li>
-          <li>Handover</li>
-          <li>Ownership</li>
-        </ol>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <p class="eyebrow">Beside the line</p>
-          <h2>Marketplace is open. Memory is next.</h2>
-          <p class="muted">They service the railway without becoming extra rails. The core system still runs without them.</p>
-        </div>
         <div class="grid two">
+
           <article class="card">
-            <p class="meta">Coming soon &middot; Records office</p>
-            <h3>Agentic Rails Memory</h3>
-            <p>Durable cross-project learnings and empirical resumes for models and agent personas.</p>
-          </article>
-          <article class="card">
-            <p class="meta available">Available now &middot; Trolley shop</p>
+            <p class="meta available">03 &middot; Optional System</p>
             <h3>Agentic Rails Marketplace</h3>
-            <p>Distributes guard rails, verifiers and tools that need a managed installation lifecycle&mdash;so they can be installed, updated and maintained cleanly across agentic environments.</p>
+            <p>Guardrails and verifiers have an installation step as plugins, but allow you to enforce rules upon your agents.</p>
             <div class="actions">
-              <a class="button secondary" href="https://github.com/JarrydAdaens/agentic_rails_marketplace">Explore the marketplace</a>
+              <a class="button secondary" href="https://github.com/JarrydAdaens/agentic_rails_marketplace">agentic_rails_marketplace</a>
             </div>
           </article>
+          
+          <article class="card">
+            <p class="meta available">04 &middot; Optional System</p>
+            <h3>Memory Template</h3>
+            <p>A git-revisioned, Markdown-only "records office" for cross-project learnings, built from your own executed work. A place to quickly drop learnings to reflect upon later.</p>
+            <div class="actions">
+              <a class="button secondary" href="https://github.com/JarrydAdaens/agentic_rails_memory">agentic_rails_memory</a>
+            </div>
+          </article>
+
         </div>
+
+
       </section>
     </main>
 
